@@ -11,13 +11,13 @@ export default function Product(props) {
       </div>
       <div className="col-3">
         <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">
+          <button type="button" class="btn btn-secondary"onClick={()=>props.decrementQuantity(props.index)}>
             -
           </button>
           <button type="button" class="btn btn-secondary">
             {props.product.quantity}
           </button>
-          <button type="button" class="btn btn-secondary">
+          <button type="button" class="btn btn-secondary" onClick={()=>props.incrementQuantity(props.index)}>
             +
           </button>
         </div>
